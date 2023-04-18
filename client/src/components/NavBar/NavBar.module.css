@@ -1,0 +1,40 @@
+.nav {
+    top: 0;
+    font-family: "Poppins", sans-serif;
+    padding: 1.7rem 0 2rem;
+    width: 100%;
+    overflow: hidden;
+    background-color: #CBD4C2;
+    
+}
+
+.title {
+    max-width: 90rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #CBD4C2;
+    
+
+    
+}
+.button {
+    display: inline-block;
+    font-family: "Poppins", sans-serif;
+    font-size: large;
+    background-color: #99AF71;
+    border-radius: 0.5rem;
+    border-width: 0;
+    padding: 0.5rem 0.8rem;
+    color: #FFFFFC;
+    transition: 0.3s;
+
+}
+.create {
+    
+    
+}
