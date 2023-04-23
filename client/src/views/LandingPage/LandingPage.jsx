@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./LandingPage.module.css";
 
 export default function LandingPage () {
@@ -6,9 +7,9 @@ export default function LandingPage () {
         <div>
             <h1>PI Foods 2023</h1>
 
-            {/* <Link to="/home"> */}
+             <Link to="/home"> 
                 <button>START</button>
-            {/* </Link> */}
+            </Link> 
         </div>
     )
 }

@@ -1,4 +1,4 @@
-const { getRecipeById } = require("../controllers/getRecipeById");
+const getRecipeById = require("../controllers/getRecipeById");
 const createRecipe = require("../controllers/createRecipe");
 const getAllRecipes = require("../controllers/getAllRecipes");
 const getRecipeByName = require("../controllers/getRecipeByName");
@@ -28,16 +28,16 @@ const getRecipeByNameHandler = async (req, res) => {
 };
 
 const createRecipeHandler = async (req, res) => {
-  const { name, image, sumary, healthScore, steps, diets } = req.body;
+  const { name, image, summary, healthScore, steps, diets } = req.body;
 
   try {
-    if (!name || !image || !sumary || !healthScore || !steps)
+    if (!name || !image || !summary || !healthScore || !steps)
       res.status(400).json({ message: "Missing data" });
 
     const response = await createRecipe(
       name,
       image,
-      sumary,
+      summary,
       healthScore,
       steps,
       diets

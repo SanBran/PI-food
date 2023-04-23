@@ -19,7 +19,7 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    sumary: {
+    summary: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -37,6 +37,7 @@ module.exports = (sequelize) => {
     },
     createdInDb: {
       type: DataTypes.BOOLEAN,
+      allowNull: false,
       defaultValue: true,
     },
   });

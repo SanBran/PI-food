@@ -10,7 +10,7 @@ const {name, image, diets, id} = recipe
         <Link to={`/detail/${id}`}>
             <img className={styles.image} src= {image} alt="Card"/>
             <h2>{name}</h2>
-            <p>{diets}</p>
+            <p>{diets.length !== 0 ? diets.join(', ') : 'No associated diets'}</p>
         </Link>
         </div>
     )

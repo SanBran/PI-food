@@ -75,36 +75,36 @@ export const postRecipe = (recipe) => {
   };
 };
 
-// export const orderByName = (value) => {
-//   return {
-//     type: ORDER_NAME,
-//     payload: value,
-//   };
-// };
+export const orderByName = (value) => {
+  return {
+    type: ORDER_NAME,
+    payload: value,
+  };
+};
 
-// export const orderHealthScore = (value) => {
-//   return {
-//     type: ORDER_HEALTHSCORE,
-//     payload: value,
-//   };
-// };
+export const orderHealthScore = (value) => {
+  return {
+    type: ORDER_HEALTHSCORE,
+    payload: value,
+  };
+};
 
-// export const filterBySource = (value) => {
-//   return {
-//     type: FILTER_SOURCE,
-//     payload: value,
-//   };
-// };
+export const filterBySource = (value) => {
+  return {
+    type: FILTER_SOURCE,
+    payload: value,
+  };
+};
 
-// export const filterByDiet = (diet) => {
-//   return {
-//     type: FILTER_DIET,
-//     payload: diet,
-//   };
-// };
+export const filterByDiet = (diet) => {
+  return {
+    type: FILTER_DIET,
+    payload: diet,
+  };
+};
 
-// export const cleanDetail = () => {
-//   return {
-//     type: CLEAN_DETAIL,
-//   };
-// };
+export const cleanDetail = () => {
+  return {
+    type: CLEAN_DETAIL,
+  };
+};

@@ -2,15 +2,15 @@ import styles from "./Cards.module.css";
 
 import Card from "../Card/Card"
 
-const Cards = ({allRecipes}) => {
+const Cards = ({currentRecipes}) => {
 
-    const recipesList = allRecipes
+    
 
     return (
         <div className={styles.container}>
-           {recipesList?.map(recipe => {
+           {currentRecipes && currentRecipes?.map((recipe, index) => {
             return (
-                <Card recipe={recipe}/>)
+                <Card recipe={recipe} key={index}/>)
            }) }
 
         </div>

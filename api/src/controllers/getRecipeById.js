@@ -31,4 +31,4 @@ const getRecipeById = async (id, source) => {
   }
 };
 
-module.exports = { getRecipeById };
+module.exports = getRecipeById;

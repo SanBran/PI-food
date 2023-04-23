@@ -4,33 +4,32 @@ import styles from "./NavBar.module.css"
 
 import SearchBar from "./SearchBar/SearchBar"
 
+import logo from "../../sources/FOOD.png"
 
-const NavBar = () => {
 
-    const {pathname} = useLocation();
+
+const NavBar = ({setCurrentPage, setLoading, setActive}) => {
+
+    const location = useLocation();
     const navigate = useNavigate();
 
     const refreshPage = () => {
-        if(pathname !== '/home') {
+        if(location.pathname !== '/home') {
             navigate('/home');
         } else {
             navigate(0);
         }
     }
-
+       
     return (
         <nav className={styles.nav}>
-            <div className={styles.title}>
-                <button onClick={refreshPage} className={styles.button}>Home PI Foods</button>
-            <div className={styles.search}>
-                <SearchBar />
-            </div>
-            <div className={styles.create}>
-                <Link to='/form'>
-                <button className={styles.button}>Create your Recipe</button>
-                </Link>
-            </div>
-            </div>
+            <a onClick={refreshPage} >
+                <img className={styles.logo} src={logo} alt="Logo"/>
+            </a>
+            <SearchBar setCurrentPage={setCurrentPage} setLoading={setLoading} setIsActive={setActive}/>
+            <Link to='/form'>
+            <h1>Create your Recipe</h1>
+            </Link>
         </nav>
     )
 }

@@ -1,27 +1,28 @@
 .nav {
-    top: 0;
-    font-family: "Poppins", sans-serif;
-    padding: 1.7rem 0 2rem;
-    width: 100%;
-    overflow: hidden;
-    background-color: #CBD4C2;
-    
-}
-
-.title {
-    max-width: 90rem;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 3rem;
+    position: fixed;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #CBD4C2;
-    
+    margin: 0 auto;
 
+    float: right;
+    
+    align-items: center;
+    justify-content: space-around;
+    
+    
+    width: 100%;
+    height: 70px;
+    
+    background-color: #8dfa21d5;
+    top: 0%;
     
 }
+
+.logo{
+    position: relative;
+    height: 55px;
+    
+} 
+
 .button {
     display: inline-block;
     font-family: "Poppins", sans-serif;

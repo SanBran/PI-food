@@ -20,7 +20,7 @@ const cleanResDatabase = (res) => {
     image: res.image,
     summary: res.summary,
     healthScore: res.healthScore,
-    diets: res.Diets?.map((e) => e.name),
+    diets: res.diets?.map((e) => e.name),
     steps: res.steps,
     created: true,
   };
@@ -36,7 +36,7 @@ const cleanArrayDb = (arr) => {
       image: e.image,
       summary: e.summary,
       healthScore: e.healthScore,
-      diets: e.Diets?.map((e) => e.name),
+      diets: e.diets?.map((e) => e.name),
       steps: e.steps,
       created: true,
     };
