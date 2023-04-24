@@ -36,57 +36,73 @@ const reducer = (state = initialState, action) => {
       return { ...state };
 
     case ORDER_NAME:
-      let recipesOrderbyName =
-        action.payload === "asc"
-          ? state.recipes.sort((a, b) => {
-              if (a.name > b.name) {
-                return 1;
-              }
-              if (b.name > a.name) {
-                return -1;
-              }
-              return 0;
-            })
-          : state.recipes.sort((a, b) => {
-              if (a.name > b.name) {
-                return -1;
-              }
-              if (b.name > a.name) {
-                return 1;
-              }
-              return 0;
-            });
-      return {
-        ...state,
-        recipes: recipesOrderbyName,
-      };
+      const allRecipes = state.recipes;
+      let recipesOrderbyName = [];
 
+      switch (action.payload) {
+        case "Sort by Name":
+          return {
+            ...state,
+            recipes: allRecipes,
+          };
+        case "A-Z":
+          recipesOrderbyName = state.recipes.sort((a, b) => {
+            if (a.name > b.name) {
+              return 1;
+            }
+            if (b.name > a.name) {
+              return -1;
+            }
+            return 0;
+          });
+
+          return {
+            ...state,
+            recipes: recipesOrderbyName,
+          };
+        case "Z-A":
+          recipesOrderbyName = state.recipes.sort((a, b) => {
+            if (a.name > b.name) {
+              return -1;
+            }
+            if (b.name > a.name) {
+              return 1;
+            }
+            return 0;
+          });
+          return {
+            ...state,
+            recipes: recipesOrderbyName,
+          };
+        default:
+          break;
+      }
     case ORDER_HEALTHSCORE:
       return {
         ...state,
         recipes:
-          action.payload === "asc"
+          action.payload === "Ascending"
             ? state.recipes.sort((a, b) => a.healthScore - b.healthScore)
             : state.recipes.sort((a, b) => b.healthScore - a.healthScore),
       };
 
     case FILTER_SOURCE:
       const filteredRecipesBySource =
-        action.payload === "true"
+        action.payload === "Data Base"
           ? state.recipesCopy.filter((recipe) => recipe.created)
           : state.recipesCopy.filter((recipe) => !recipe.created);
       return {
         ...state,
         recipes:
-          action.payload === "all"
+          action.payload === "Filter by Source"
             ? state.recipesCopy
             : filteredRecipesBySource,
       };
 
     case FILTER_DIET:
       const filteredRecipesByDiet =
-        action.payload === "all"
-          ? state.recipesCopy
+        action.payload === "Filter by Diet Type"
+          ? state.recipes
           : state.recipesCopy.filter((recipe) =>
               recipe.diets.includes(action.payload)
             );

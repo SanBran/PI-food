@@ -1,11 +1,11 @@
 .container {
     display: flex;
-    flex-direction: column;
-    background-color: rgb(102, 173, 255);
-    border: solid gray;
-    border-radius: 5px;
-    max-height: 500px;
-    padding: 25px;
+    background-color: rgb(255, 255, 255);
+    border: solid .5mm gray; 
+    border-top: none;
+    width: 360px;
+    height: 400px;
+    justify-content: center;
     cursor: pointer;
     -moz-osx-font-smoothing: grayscale;
     backface-visibility: hidden;
@@ -15,4 +15,34 @@
 
 .container:hover {
     transform: scale(1.05);
+}
+
+.image {
+    width: 361px;
+}
+
+.name{
+    position: relative;
+    top: -20px;
+}
+
+.diets{
+    position: relative;
+    top: -30px; 
+}
+.link{
+    text-decoration: none;
+    color:black;
+}
+.hs{
+    position: absolute;
+    top: -18px;
+    right: 2px;
+    z-index: 10;
+    color: rgb(44, 44, 44);
+    border-radius: 50%;
+    background-color: rgba(63, 224, 111, 0.795);
+    box-shadow: 5px black;
+    padding: 10px;
+
 }
