@@ -34,9 +34,9 @@ const SearchBar = ({setCurrentPage, setActive, setLoading}) => {
     }
 
     return (
-        <div>
-            <input className={styles.input} value={searchString} onChange={handleChange} type="search"/>
-            {searchString === '' ? <button className={styles.button} disabled >Search</button> : <button className={styles.button} onClick={() => handleSubmit(searchString)}> Search </button>}
+        <div className={styles.container}>
+            <input className={styles.input} value={searchString} onChange={handleChange} type="search" placeholder="   Search recipe"/>
+            {searchString === '' ? <button className={styles.button} disabled ></button> : <button className={styles.button} onClick={() => handleSubmit(searchString)}></button>}
         </div>
     )
 }

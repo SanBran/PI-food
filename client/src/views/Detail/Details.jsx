@@ -28,7 +28,8 @@ export default function Detail () {
     return (
       
         
-        <div className={styles.container}>          
+        <div className={styles.container}> 
+                 
             <div className={styles.left}>
                 <div className={styles.image}>
                 <img src={detail.image} alt={detail.name}/>

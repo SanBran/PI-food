@@ -27,7 +27,7 @@ const NavBar = ({setCurrentPage, setLoading, setActive}) => {
                 <img className={styles.logo} src={logo} alt="Logo"/>
             </a>
             <SearchBar setCurrentPage={setCurrentPage} setLoading={setLoading} setIsActive={setActive}/>
-            <Link to='/form'>
+            <Link to='/form' className={styles.create}>
             <h1>Create your Recipe</h1>
             </Link>
         </nav>
